@@ -7,6 +7,7 @@ import com.springBajo8.springBajo8.domain.citasDTOReactiva;
 import com.springBajo8.springBajo8.repository.IcitasReactivaRepository;
 import com.springBajo8.springBajo8.service.IcitasReactivaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -15,6 +16,7 @@ import reactor.core.publisher.Mono;
 public class citasReactivaServiceImpl implements IcitasReactivaService {
 
     @Autowired
+    @Qualifier("ejemplo")
     private IcitasReactivaRepository IcitasReactivaRepository;
 
     @Override
