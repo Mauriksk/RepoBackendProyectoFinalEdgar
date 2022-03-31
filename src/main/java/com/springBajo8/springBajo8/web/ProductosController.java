@@ -24,7 +24,7 @@ public class ProductosController {
         return this.productosService.save(productos);
     }
 
-    @GetMapping("getproductos")
+    @GetMapping("/getproductos")
     private Flux<Productos> findAll(){
         return this.productosService.findAll();
     }
@@ -35,6 +35,14 @@ public class ProductosController {
                 .flatMap(productos1 -> Mono.just(ResponseEntity.ok(productos1)))
                 .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));
     }
+
+    @DeleteMapping("/{id}")
+    private Mono<ResponseEntity<Productos>> delete(@PathVariable("id") String id){
+        return this.productosService.delete(id)
+                .flatMap( productos -> Mono.just(ResponseEntity.ok(productos)))
+                .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));
+    }
+
 
 
 }

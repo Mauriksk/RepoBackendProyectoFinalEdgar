@@ -1,6 +1,7 @@
 package com.springBajo8.springBajo8.service.impl;
 
 import com.springBajo8.springBajo8.domain.Productos;
+import com.springBajo8.springBajo8.domain.citasDTOReactiva;
 import com.springBajo8.springBajo8.repository.ProductosRepo;
 import com.springBajo8.springBajo8.service.ProductosService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,4 +34,12 @@ public class ProductosServiceImplement implements ProductosService {
             return save(productos);
         });
     }
+
+    @Override
+    public Mono<Productos> delete(String id) {
+        return this.productosRepo.findById(id)
+                .flatMap(p -> this.productosRepo.deleteById(p.getId()).thenReturn(p));
+    }
+
+
 }

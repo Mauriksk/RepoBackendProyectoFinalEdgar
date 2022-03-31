@@ -6,13 +6,12 @@ import com.springBajo8.springBajo8.domain.Productos;
 import com.springBajo8.springBajo8.service.FacturaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class FacturasController {
 
     @Autowired
@@ -23,5 +22,8 @@ public class FacturasController {
     private Mono<Factura> save(@RequestBody Factura factura){
         return this.facturaService.save(factura);
     }
+
+    @GetMapping("/getfacturas")
+    private Flux<Factura> findAll(){ return this.facturaService.findAll(); }
 
 }

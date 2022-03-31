@@ -9,4 +9,5 @@ public interface ProductosService {
     Mono<Productos> save(Productos productos);
     Flux<Productos> findAll();
     Mono<Productos> update(String id, Productos productos);
+    Mono<Productos> delete(String id);
 }
