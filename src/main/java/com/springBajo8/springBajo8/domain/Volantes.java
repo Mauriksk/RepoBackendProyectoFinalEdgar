@@ -14,6 +14,15 @@ public class Volantes {
     private List<Productos> listaProuctos;
     private String date;
     private String cedulaProveedor;
+    private String valorTotal;
+
+    public String getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(String valorTotal) {
+        this.valorTotal = valorTotal;
+    }
 
     public String getId() {
         return id;
