@@ -5,6 +5,7 @@ import com.springBajo8.springBajo8.domain.Productos;
 import com.springBajo8.springBajo8.domain.Volantes;
 import com.springBajo8.springBajo8.service.FacturaService;
 import com.springBajo8.springBajo8.service.VolantesService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -14,6 +15,7 @@ import reactor.core.publisher.Mono;
 @CrossOrigin(origins = "*")
 public class VolantesController {
 
+    @Autowired
     private VolantesService volantesService;
 
     @PostMapping("/savevolantes")

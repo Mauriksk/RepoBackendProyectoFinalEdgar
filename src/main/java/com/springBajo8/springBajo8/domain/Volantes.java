@@ -12,7 +12,7 @@ public class Volantes {
     @Id
     private String id = UUID.randomUUID().toString().substring(0, 10);
     private List<Productos> listaProuctos;
-    private LocalDate date;
+    private String date;
     private String cedulaProveedor;
 
     public String getId() {
@@ -31,11 +31,11 @@ public class Volantes {
         this.listaProuctos = listaProuctos;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
