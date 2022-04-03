@@ -2,7 +2,6 @@ package com.springBajo8.springBajo8.web;
 
 
 import com.springBajo8.springBajo8.domain.Productos;
-import com.springBajo8.springBajo8.domain.citasDTOReactiva;
 import com.springBajo8.springBajo8.service.ProductosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

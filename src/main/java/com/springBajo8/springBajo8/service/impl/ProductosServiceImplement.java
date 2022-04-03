@@ -1,7 +1,6 @@
 package com.springBajo8.springBajo8.service.impl;
 
 import com.springBajo8.springBajo8.domain.Productos;
-import com.springBajo8.springBajo8.domain.citasDTOReactiva;
 import com.springBajo8.springBajo8.repository.ProductosRepo;
 import com.springBajo8.springBajo8.service.ProductosService;
 import org.springframework.beans.factory.annotation.Autowired;

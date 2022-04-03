@@ -3,7 +3,6 @@ package com.springBajo8.springBajo8.domain;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
@@ -11,7 +10,7 @@ import java.util.UUID;
 public class Volantes {
     @Id
     private String id = UUID.randomUUID().toString().substring(0, 10);
-    private List<Productos> listaProuctos;
+    private List<Object> listaProductos;
     private String date;
     private String cedulaProveedor;
     private String valorTotal;
@@ -32,12 +31,12 @@ public class Volantes {
         this.id = id;
     }
 
-    public List<Productos> getListaProuctos() {
-        return listaProuctos;
+    public List<Object> getListaProductos() {
+        return listaProductos;
     }
 
-    public void setListaProuctos(List<Productos> listaProuctos) {
-        this.listaProuctos = listaProuctos;
+    public void setListaProductos(List<Object> listaProductos) {
+        this.listaProductos = listaProductos;
     }
 
     public String getDate() {
