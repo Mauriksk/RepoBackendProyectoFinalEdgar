@@ -1,6 +1,1 @@
-"# clinica-spring-mongoDB" 
-"# clinicacitas-spring-mongoDB" 
-"# appCitas-spring-mongoDB" 
-"# appCitas-spring-mongoDB" 
-"# appCitas-spring-mongoDB" 
-"# appCitas-spring-reactivo-mongoDB" 
+Link al video https://www.youtube.com/watch?v=TJzHOjj6koc&t=4s
